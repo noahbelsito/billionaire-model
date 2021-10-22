@@ -19,3 +19,5 @@ billionaire_model.fit(train_X, train_y)  # fit features and value to predict to 
 val_predictions = billionaire_model.predict(val_X)  # predict value using validation data
 mae = mean_absolute_error(val_y, val_predictions)  # validate model with mae using val_y and val_predictions
 print('Split Data MAE: ', mae)  # print mae
+print('Top Few Predictions: ', billionaire_model.predict(val_X.head()))  # predictions
+print('Top Few Actual Values: ', val_y.head().tolist())  # actual values
